@@ -15,22 +15,26 @@
     <a class="nav-link active text-light font-weight-bold" href="#"><img src="./assets/img/sh2.jpg" width="40px" height="40px" alt="" mx-2> SuperHero</a>
   </nav>
 
-  <main class="container">
-
-
+  <main class="container-fluid">
     <form id="formulario">
-      <div class="container justify-content-center">
-        <img src="./assets/img/sh1.jpg" alt="" class="w-70">
+      <div class="container">
+        <div class="row">
+          <div id="mostrarHeroe" class="container-fluid col-lg-5">
+            <img src="./assets/img/sh1.jpg" alt="" class="imagenPrimeraPantalla w-70">
+          </div>
+          <div id="chartContainer" class="col-lg-6" style="height: 370px; width: 100%;"></div>
+
+        </div>
+        <h3>Encuentra tu SuperHero</h3>
+        <label for="nombre">Ingresa el número del SuperHero a buscar</label>
+        <input type="search" class="d-block border-white mb-2">
+        <button type="button" class="btn btn-primary">Buscar</button>
+        <span></span>
       </div>
-      <h3>Encuentra tu SuperHero</h3>
-      <label for="nombre">Ingresa el número del SuperHero a buscar</label>
-      <input type="search" class="d-block border-white mb-2">
-      <button type="button" class="btn btn-primary">Buscar</button>
-      <span></span>
     </form>
   </main>
 
-  <div id="chartContainer" style="height: 370px; width: 100%;"></div>
+
 
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
