@@ -68,12 +68,16 @@ $(document).ready(function() {
             }]
           }; //fin grafico
 
-          //console.log(todosLosDatosDelHeroRecorrido)
+          //ocultamos el grafico en pantalla principal
           $("#chartContainer").removeClass("d-none");
+          //agregamos el grafico a la pantalla
           $("#chartContainer").CanvasJSChart(graficostatHero);
+          //dejamos tarjeta del heroe vacia, para que al cargar unno nuevo solo quede 1 en pantalla
           $('#tarjertaHeroe').html("");
+          //mostramos los datos del heroe en pantalla
           $('#tarjertaHeroe').append(tarjetaDelHeroe);
           //$('.imagenPrimeraPantalla').remove();
+          //ocultamos la card en pantalla principal
           $("#tarjertaHeroe").removeClass("d-none");
         },
         dataType: 'json',
