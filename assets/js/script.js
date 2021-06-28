@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $('button').click(function() {
     const valueInput = $('input').val();
+    console.log(valueInput)
     if (!validar(valueInput)) {
       alert('El número ingresado aún no tiene un Hero, ingrese sólo números entre el 1 y el 731')
     } else {
@@ -11,7 +12,7 @@ $(document).ready(function() {
   function getHero(idDelHero) {
     $.ajax({
         type: 'GET',
-        url: "https://us-central1-crud-vue-firebase-3af18.cloudfunctions.net/instrument/superhero/10222760568656845/" + idDelHero,
+        url: "https://superheroapi.com/api.php/10222760568656845/" + idDelHero,
         success: function(datosHero) {
           const nombreDelHero = datosHero.name;
           const tarjetaDelHeroe = [];
